@@ -27,7 +27,7 @@ function buildTable(data) {
 let filters = {};
 
 // 3. Use this function to update the filters. 
-function updateFilters() {
+function updatedFilters() {
 
     // 4a. Save the element that was changed as a variable.
     let changeElement = d3.select(this);
@@ -37,7 +37,6 @@ function updateFilters() {
     // 4c. Save the id of the filter that was changed as a variable.
     let Filterid = changeElement.attr("id")
     console.log(Filterid)
-  
     // 5. If a filter value was entered then add that filterId and value
     // to the filters list. Otherwise, clear that filter from the filters object.
     if (elementvalue){
@@ -46,7 +45,6 @@ function updateFilters() {
     else {
       delete filters[Filterid]
     }
-  
     // 6. Call function to apply all filters and rebuild the table
     filterTable();
   
